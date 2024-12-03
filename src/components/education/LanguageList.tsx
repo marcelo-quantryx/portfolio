@@ -6,6 +6,19 @@ interface LanguageListProps {
   languages: Language[];
 }
 
+const getLanguageEmoji = (name: string): string => {
+  switch (name.toLowerCase()) {
+    case 'portuguese':
+      return '🇧🇷';
+    case 'english':
+      return '🇬🇧';
+    case 'spanish':
+      return '🇪🇸';
+    default:
+      return '';
+  }
+};
+
 export function LanguageList({ languages }: LanguageListProps) {
   return (
     <div className="flex gap-6">
@@ -18,6 +31,9 @@ export function LanguageList({ languages }: LanguageListProps) {
           <ul className="space-y-2">
             {languages.map((language) => (
               <li key={language.name} className="flex items-center gap-2">
+                <span className="text-xl" role="img" aria-label={`${language.name} flag`}>
+                  {getLanguageEmoji(language.name)}
+                </span>
                 <span className="font-medium text-gray-900">{language.name}</span>
                 <span className="text-gray-600">- {language.level}</span>
               </li>
