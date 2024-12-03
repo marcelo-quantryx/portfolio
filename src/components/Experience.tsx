@@ -10,7 +10,7 @@ export function Experience() {
         <div className="relative">
           {experiences.map((experience, index) => (
             <ExperienceItem
-              key={`${experience.company}-${experience.period}`}
+              key={`${experience.name}-${experience.period}`}
               experience={experience}
               isLast={index === experiences.length - 1}
             />
