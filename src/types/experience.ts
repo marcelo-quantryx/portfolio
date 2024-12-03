@@ -1,5 +1,6 @@
 export interface Experience {
   company: string;
+  website: string;
   position: string;
   period: string;
   description: string;
