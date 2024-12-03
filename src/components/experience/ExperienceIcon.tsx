@@ -7,7 +7,7 @@ interface ExperienceIconProps {
 
 export function ExperienceIcon({ company }: ExperienceIconProps) {
   switch (company) {
-    case 'Xiatech':
+    case 'Xiatech Consulting Ltd':
       return <Database className="w-6 h-6 text-gray-600" />;
     case 'I Saw It First':
       return <ShoppingCart className="w-6 h-6 text-gray-600" />;

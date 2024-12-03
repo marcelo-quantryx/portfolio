@@ -5,9 +5,9 @@ import type { Experience } from '../types/experience';
 export function Experience() {
   const experiences: Experience[] = [
     {
-      company: "Xiatech",
+      company: "Xiatech Consulting Ltd",
       position: "Senior Data Engineer",
-      period: "January 2023 - Present",
+      period: "January 2023 - September 2024",
       location: "London, UK",
       description: "Leading development of data pipelines and ETL processes. Implementing cloud-native data solutions and mentoring junior engineers in best practices.",
       technologies: ["Python", "AWS", "Apache Airflow", "Snowflake", "dbt", "Docker"],
@@ -21,19 +21,19 @@ export function Experience() {
     },
     {
       company: "I Saw It First",
-      position: "Full Stack Developer",
+      position: "Business Intelligence Developer",
       period: "March 2022 - December 2022",
       location: "Manchester, UK",
       description: "Built and maintained e-commerce platform using React and Node.js. Improved application performance and user experience.",
       technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS"]
     },
     {
-      company: "Freelance",
-      position: "Software Developer",
+      company: "Quantryx Ltd",
+      position: "Freelancer Data Engineer",
       period: "June 2021 - February 2022",
       location: "Remote",
       description: "Developed custom web applications and solutions for various clients using modern technologies.",
-      technologies: ["React", "Next.js", "Node.js", "MongoDB", "Firebase", "Tailwind CSS"]
+      technologies: ["Python", "Flask", "REST", "SQLAlchemy", "BigQuery", "Dashboards"]
     },
     {
       company: "SMBC",

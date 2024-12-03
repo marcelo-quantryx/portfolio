@@ -6,7 +6,7 @@ export function Header() {
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-xl font-bold text-gray-900">John Doe</h1>
+          <h1 className="text-xl font-bold text-gray-900">Marcelo Ribeiro</h1>
           <nav className="flex items-center gap-6">
             <a href="#experience" className="text-gray-600 hover:text-gray-900">Experience</a>
             <a href="#education" className="text-gray-600 hover:text-gray-900">Education</a>
