@@ -3,6 +3,7 @@ import { ExperienceIcon } from './ExperienceIcon';
 import { TimelineConnector } from './TimelineConnector';
 import { TechBadge } from './TechBadge';
 import { ExperienceDetail } from './ExperienceDetail';
+import { ExternalLink, MapPin, Calendar } from 'lucide-react';
 import type { Experience } from '../../types/experience';
 
 interface ExperienceItemProps {
@@ -23,9 +24,25 @@ export function ExperienceItem({ experience, isLast }: ExperienceItemProps) {
       </div>
       <div className="flex-1 pb-8">
         <div className="bg-white p-6 rounded-lg border border-gray-100">
-          <h3 className="text-xl font-semibold text-gray-900">{experience.position}</h3>
-          <p className="text-gray-600 mb-2">
-            {experience.company} • {experience.location} • {experience.period}
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">{experience.position}</h3>
+          <p className="text-gray-600 mb-1">
+            <a
+              href={experience.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-gray-600 transition-colors inline-flex items-center gap-1"
+            >
+              {experience.company}
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </p>
+          <p className="text-gray-600 mb-1 flex items-center gap-1">
+            <Calendar className="w-4 h-4" />
+            {experience.period}
+          </p>
+          <p className="text-gray-600 mb-4 flex items-center gap-1">
+            <MapPin className="w-4 h-4" />
+            {experience.location}
           </p>
           <p className="text-gray-600 mb-4">{experience.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
