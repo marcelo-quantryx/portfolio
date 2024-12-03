@@ -17,7 +17,7 @@ export function Header() {
             <Link href="/#projects" className="text-gray-600 hover:text-gray-900">Projects</Link>
             <div className="flex items-center gap-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/marcelo-quantryx/portfolio" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-gray-900"
@@ -25,7 +25,7 @@ export function Header() {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/marcelogazzola" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-gray-900"
@@ -33,7 +33,7 @@ export function Header() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="mailto:john@example.com" 
+                href="mailto:marcelo@quantryx.com" 
                 className="text-gray-600 hover:text-gray-900"
               >
                 <Mail className="w-5 h-5" />
