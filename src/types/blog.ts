@@ -5,4 +5,9 @@ export interface BlogPost {
   readTime: string;
   imageUrl: string;
   tags: string[];
+  slug: string;
+}
+
+export interface BlogContent {
+  content: string;
 }
