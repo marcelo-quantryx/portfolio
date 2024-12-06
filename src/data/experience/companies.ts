@@ -28,7 +28,7 @@ export const companies: Record<string, Company> = {
     location: "London, United Kingdom"
   },
   itau: {
-    name: "Banco Itau BBA",
+    name: "Banco Itaú BBA",
     website: "https://www.itau.com.br/itaubba-pt",
     location: "São Paulo, Brazil"
   }
