@@ -21,7 +21,6 @@ export function Contact() {
             <ContactForm />
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-100">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Schedule a Meeting</h3>
             <CalendarEmbed />
           </div>
         </div>
