@@ -10,7 +10,7 @@ export function Blog() {
           <Construction className="w-12 h-12 text-gray-400 mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-gray-900 mb-2">Coming Soon</h3>
           <p className="text-gray-600">
-            Our blog is currently under construction. Stay tuned for insightful articles about data engineering, cloud technologies, and more!
+            The blog is currently under construction. Stay tuned for insightful articles about data engineering, cloud technologies, and more!
           </p>
         </div>
       </div>
