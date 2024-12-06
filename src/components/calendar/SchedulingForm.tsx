@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { format } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 import type { SchedulingFormData } from '../../types/calendar';
 
 interface SchedulingFormProps {
   date: Date;
   timeSlot: string;
+  timezone: string;
+  status: 'idle' | 'scheduling' | 'success' | 'error';
   onSchedule: (data: SchedulingFormData) => void;
 }
 
-export function SchedulingForm({ date, timeSlot, onSchedule }: SchedulingFormProps) {
+export function SchedulingForm({ date, timeSlot, timezone, status, onSchedule }: SchedulingFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,7 +22,8 @@ export function SchedulingForm({ date, timeSlot, onSchedule }: SchedulingFormPro
     onSchedule({
       ...formData,
       date,
-      timeSlot
+      timeSlot,
+      timezone
     });
   };
 
@@ -38,8 +41,11 @@ export function SchedulingForm({ date, timeSlot, onSchedule }: SchedulingFormPro
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <h4 className="text-sm font-medium text-gray-900 mb-2">
-          Schedule for {format(date, 'MMMM d, yyyy')} at {timeSlot}
+          Schedule for {formatInTimeZone(date, timezone, 'MMMM d, yyyy')} at {timeSlot}
         </h4>
+        <p className="text-sm text-gray-600">
+          Timezone: {timezone}
+        </p>
       </div>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -50,6 +56,7 @@ export function SchedulingForm({ date, timeSlot, onSchedule }: SchedulingFormPro
           id="name"
           name="name"
           required
+          disabled={status === 'scheduling'}
           value={formData.name}
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
@@ -64,6 +71,7 @@ export function SchedulingForm({ date, timeSlot, onSchedule }: SchedulingFormPro
           id="email"
           name="email"
           required
+          disabled={status === 'scheduling'}
           value={formData.email}
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
@@ -77,17 +85,29 @@ export function SchedulingForm({ date, timeSlot, onSchedule }: SchedulingFormPro
           id="description"
           name="description"
           required
+          disabled={status === 'scheduling'}
           value={formData.description}
           onChange={handleChange}
           rows={3}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
         />
       </div>
+      {status === 'success' && (
+        <p className="text-green-600 text-sm">Meeting scheduled successfully! Check your email for details.</p>
+      )}
+      {status === 'error' && (
+        <p className="text-red-600 text-sm">Failed to schedule meeting. Please try again.</p>
+      )}
       <button
         type="submit"
-        className="w-full bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+        disabled={status === 'scheduling'}
+        className={`w-full bg-gray-900 text-white px-4 py-2 rounded-lg transition-colors ${
+          status === 'scheduling'
+            ? 'opacity-75 cursor-not-allowed'
+            : 'hover:bg-gray-800'
+        }`}
       >
-        Schedule Meeting
+        {status === 'scheduling' ? 'Scheduling...' : 'Schedule Meeting'}
       </button>
     </form>
   );
