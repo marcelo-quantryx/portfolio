@@ -6,6 +6,7 @@ import { Education } from './components/Education';
 import { Blog } from './components/Blog';
 import { BlogPostView } from './components/blog/BlogPostView';
 import { Projects } from './components/Projects';
+import { Referrals } from './components/Referrals';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -34,6 +35,7 @@ function App() {
         <Education />
         <Blog />
         <Projects />
+        <Referrals />
         <Contact />
       </>
     );
