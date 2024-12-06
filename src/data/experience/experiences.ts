@@ -5,7 +5,7 @@ import type { Experience } from '../../types/experience';
 export const experiences: Experience[] = [
   {
     ...companies.xiatech,
-    position: "Senior Data Engineer",
+    position: "Data Engineer",
     period: "February 2022 - September 2024",
     description: "Led the design and implementation of cloud-native data solutions, ensuring efficient, scalable, and secure data pipelines. Mentored junior engineers and drove best practices for data engineering.",
     technologies: ["Python", "Google Cloud", "Terraform", "Apache Airflow", "PySpark", "BigQuery", "Dataform", "Docker"],
