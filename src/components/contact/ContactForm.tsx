@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import type { ContactFormData } from '../../types/contact';
 
@@ -10,22 +10,25 @@ export function ContactForm() {
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
+  useEffect(() => {
+    emailjs.init('tGyMQV2q1k6zagRHy');
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'quantryx',
+        'template_6udt6af',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_name: 'Marcelo',
           to_email: 'marcelo@quantryx.com'
-        },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        }
       );
 
       setStatus('success');
