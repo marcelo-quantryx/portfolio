@@ -1,3 +1,3 @@
-export * from './companies';
-export * from './experiences';
-export * from './freelance-projects';
+export { companies } from './companies';
+export { experiences } from './experiences';
+export { freelanceProjects } from './freelance-projects';
