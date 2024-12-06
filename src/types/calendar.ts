@@ -10,9 +10,17 @@ export interface SchedulingFormData {
   date: Date;
   timeSlot: string;
   description: string;
+  timezone: string;
 }
 
 export interface DaySchedule {
   date: Date;
   slots: TimeSlot[];
+}
+
+export interface Timezone {
+  value: string;
+  label: string;
+  offset: number;
+  abbrev: string;
 }
