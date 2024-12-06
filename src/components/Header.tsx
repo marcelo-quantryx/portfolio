@@ -13,7 +13,7 @@ export function Header() {
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-gray-900">
+          <Link href="/" className="text-xl font-bold text-gray-900" category="header">
             Marcelo Ribeiro
           </Link>
 
@@ -27,17 +27,23 @@ export function Header() {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <Link href="/#experience" className="text-gray-600 hover:text-gray-900">Experience</Link>
-            <Link href="/#education" className="text-gray-600 hover:text-gray-900">Education</Link>
-            <Link href="/#blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
-            <Link href="/#projects" className="text-gray-600 hover:text-gray-900">Projects</Link>
-            <Link href="/#referrals" className="text-gray-600 hover:text-gray-900">Referrals</Link>
+            <Link href="/#experience" className="text-gray-600 hover:text-gray-900" category="header">Experience</Link>
+            <Link href="/#education" className="text-gray-600 hover:text-gray-900" category="header">Education</Link>
+            <Link href="/#blog" className="text-gray-600 hover:text-gray-900" category="header">Blog</Link>
+            <Link href="/#projects" className="text-gray-600 hover:text-gray-900" category="header">Projects</Link>
+            <Link href="/#referrals" className="text-gray-600 hover:text-gray-900" category="header">Referrals</Link>
             <div className="flex items-center gap-4">
               <a 
                 href="https://github.com/marcelo-quantryx/portfolio" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-gray-900"
+                onClick={() => window.dataLayer?.push({
+                  event: 'social_click',
+                  eventCategory: 'social',
+                  eventAction: 'click',
+                  eventLabel: 'github'
+                })}
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -46,12 +52,24 @@ export function Header() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-gray-900"
+                onClick={() => window.dataLayer?.push({
+                  event: 'social_click',
+                  eventCategory: 'social',
+                  eventAction: 'click',
+                  eventLabel: 'linkedin'
+                })}
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
                 href="mailto:marcelo@quantryx.com" 
                 className="text-gray-600 hover:text-gray-900"
+                onClick={() => window.dataLayer?.push({
+                  event: 'social_click',
+                  eventCategory: 'social',
+                  eventAction: 'click',
+                  eventLabel: 'email'
+                })}
               >
                 <Mail className="w-5 h-5" />
               </a>
@@ -67,6 +85,7 @@ export function Header() {
                 href="/#experience" 
                 className="text-gray-600 hover:text-gray-900"
                 onClick={() => setIsMenuOpen(false)}
+                category="header_mobile"
               >
                 Experience
               </Link>
@@ -74,6 +93,7 @@ export function Header() {
                 href="/#education" 
                 className="text-gray-600 hover:text-gray-900"
                 onClick={() => setIsMenuOpen(false)}
+                category="header_mobile"
               >
                 Education
               </Link>
@@ -81,6 +101,7 @@ export function Header() {
                 href="/#blog" 
                 className="text-gray-600 hover:text-gray-900"
                 onClick={() => setIsMenuOpen(false)}
+                category="header_mobile"
               >
                 Blog
               </Link>
@@ -88,6 +109,7 @@ export function Header() {
                 href="/#projects" 
                 className="text-gray-600 hover:text-gray-900"
                 onClick={() => setIsMenuOpen(false)}
+                category="header_mobile"
               >
                 Projects
               </Link>
@@ -95,6 +117,7 @@ export function Header() {
                 href="/#referrals" 
                 className="text-gray-600 hover:text-gray-900"
                 onClick={() => setIsMenuOpen(false)}
+                category="header_mobile"
               >
                 Referrals
               </Link>
@@ -104,6 +127,12 @@ export function Header() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-600 hover:text-gray-900"
+                  onClick={() => window.dataLayer?.push({
+                    event: 'social_click',
+                    eventCategory: 'social_mobile',
+                    eventAction: 'click',
+                    eventLabel: 'github'
+                  })}
                 >
                   <Github className="w-5 h-5" />
                 </a>
@@ -112,12 +141,24 @@ export function Header() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-600 hover:text-gray-900"
+                  onClick={() => window.dataLayer?.push({
+                    event: 'social_click',
+                    eventCategory: 'social_mobile',
+                    eventAction: 'click',
+                    eventLabel: 'linkedin'
+                  })}
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
                   href="mailto:marcelo@quantryx.com" 
                   className="text-gray-600 hover:text-gray-900"
+                  onClick={() => window.dataLayer?.push({
+                    event: 'social_click',
+                    eventCategory: 'social_mobile',
+                    eventAction: 'click',
+                    eventLabel: 'email'
+                  })}
                 >
                   <Mail className="w-5 h-5" />
                 </a>
