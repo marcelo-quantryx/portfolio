@@ -1,6 +1,7 @@
 import React from 'react';
 import { Clock, ArrowRight } from 'lucide-react';
 import type { BlogPost as BlogPostType } from '../../types/blog';
+import { Link } from '../common/Link';
 
 interface BlogPostProps {
   post: BlogPostType;
@@ -32,10 +33,13 @@ export function BlogPost({ post }: BlogPostProps) {
             <Clock className="w-4 h-4" />
             <span>{post.readTime}</span>
           </div>
-          <button className="flex items-center gap-1 text-gray-900 hover:text-gray-600 transition-colors">
+          <Link 
+            href={`/blog/${post.slug}`}
+            className="flex items-center gap-1 text-gray-900 hover:text-gray-600 transition-colors"
+          >
             Read more
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </article>

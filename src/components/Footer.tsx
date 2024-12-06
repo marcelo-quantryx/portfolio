@@ -10,13 +10,13 @@ export function Footer() {
             <p className="text-gray-400">© 2024 Quantryx Ltd. All rights reserved.</p>
           </div>
           <div className="flex items-center gap-6">
-            <a href="https://github.com" className="text-gray-400 hover:text-white">
+            <a href="https://github.com/marcelo-quantryx/portfolio" className="text-gray-400 hover:text-white">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-400 hover:text-white">
+            <a href="https://www.linkedin.com/in/marcelogazzola" className="text-gray-400 hover:text-white">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:john@example.com" className="text-gray-400 hover:text-white">
+            <a href="mailto:marcelo@quantryx.com" className="text-gray-400 hover:text-white">
               <Mail className="w-5 h-5" />
             </a>
           </div>
