@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, MapPin, Calendar } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, ExternalLink } from 'lucide-react';
 import type { Education } from '../../types/education';
 
 interface EducationItemProps {
@@ -14,7 +14,18 @@ export function EducationItem({ education }: EducationItemProps) {
       </div>
       <div className="flex-1">
         <div className="bg-white p-6 rounded-lg border border-gray-100">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">{education.institution}</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">{education.degree}</h3>
+          <p className="text-gray-600 mb-1">
+            <a
+              href={education.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-gray-600 transition-colors inline-flex items-center gap-1"
+            >
+              {education.institution}
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </p>
           <p className="text-gray-600 mb-1 flex items-center gap-1">
             <Calendar className="w-4 h-4" />
             {education.period}
@@ -23,7 +34,6 @@ export function EducationItem({ education }: EducationItemProps) {
             <MapPin className="w-4 h-4" />
             {education.location}
           </p>
-          <p className="text-gray-900 font-medium mb-2">{education.degree}</p>
           <p className="text-gray-600">{education.description}</p>
         </div>
       </div>
