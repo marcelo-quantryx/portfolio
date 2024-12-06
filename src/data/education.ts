@@ -2,6 +2,7 @@ import type { Education, Language } from '../types/education';
 
 export const education: Education = {
   institution: "University Centre of FEI",
+  website: "https://portal.fei.edu.br/",
   location: "São Bernardo do Campo, Brazil",
   degree: "Bachelor of Science Production Engineering",
   period: "February 2009 - June 2015",
@@ -9,7 +10,7 @@ export const education: Education = {
 };
 
 export const languages: Language[] = [
-  { name: "Portuguese", level: "C2, Proficient" },
-  { name: "English", level: "C2, Proficient" },
+  { name: "English", level: "C2" },
+  { name: "Portuguese", level: "C2" },
   { name: "Spanish", level: "B2" }
 ];
