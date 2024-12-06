@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
   {
     ...companies.freelance,
     position: "Freelancer Data Engineer",
-    period: "Dec 2019 – Sep 2021",
+    period: "December 2019 - September 2021",
     description: "Delivered tailored data solutions for various clients, specializing in data analysis, visualization, database management, and process automation.",
     technologies: ["Python", "Flask", "PostgreSQL", "Snowflake", "MySQL", "AWS Lambda", "Klipfolio", "Power BI", "Heroku", "NGINX", "Ubuntu", "REST APIs", "GraphQL", "Selenium", "BeautifulSoup4", "Pandas", "PyTesseract"],
     detailedDescription: "Provided end-to-end data solutions, including building dashboards, developing ETL pipelines, and implementing web scraping frameworks. Focused on leveraging Python and cloud-native tools to deliver scalable, efficient, and maintainable systems.",
@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
   {
     ...companies.itau,
     position: "Middle Office Data Analyst",
-    period: "Mar 2015 - May 2018",
+    period: "March 2015 - May 2018",
     description: "Led process optimization initiatives and data analysis for the middle office, focusing on automation, risk management, and operational efficiency.",
     technologies: ["VBA", "MS Access", "SQL", "C#", "MiniTab", "Excel"],
     detailedDescription: "Implemented comprehensive data analysis and process automation solutions for the middle office, focusing on risk management and operational efficiency. Developed automated reporting systems and conducted statistical analysis to optimize team capacity and resource allocation.",
@@ -64,7 +64,7 @@ export const experiences: Experience[] = [
   {
     ...companies.smbcUk,
     position: "Data Governance Analyst",
-    period: "Jun 2019 - Nov 2019",
+    period: "June 2019 - November 2019",
     description: "Established Data Governance capabilities for EMEA, focusing on information asset management and GDPR compliance.",
     technologies: ["MS Access", "Excel VBA", "SQL", "Data Governance", "GDPR"],
     detailedDescription: "Led the design and implementation of the Information Asset Register from conception to delivery, including data warehouse architecture and application interface development. Implemented robust data management practices aligned with GDPR requirements.",
