@@ -30,7 +30,7 @@ export function Hero() {
           </div>
           <div className="flex-1">
             <img
-              src="public/images/me.jpeg"
+              src="images/me.jpeg"
               alt="Profile"
               className="w-64 h-64 rounded-full object-cover mx-auto border-4 border-white shadow-lg"
             />
