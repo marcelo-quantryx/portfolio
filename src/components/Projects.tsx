@@ -10,7 +10,7 @@ export function Projects() {
           <Construction className="w-12 h-12 text-gray-400 mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-gray-900 mb-2">Under Construction</h3>
           <p className="text-gray-600">
-            We're working on showcasing some exciting projects. Check back soon to see our featured work!
+            We're working on showcasing some exciting projects. Check back soon to see featured work!
           </p>
         </div>
       </div>
