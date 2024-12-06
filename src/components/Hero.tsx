@@ -30,7 +30,7 @@ export function Hero() {
           </div>
           <div className="flex-1">
             <img
-              src="https://images.unsplash.com/photo-1603575448878-868a20723f5d"
+              src="/images/profile.jpg"
               alt="Profile"
               className="w-64 h-64 rounded-full object-cover mx-auto border-4 border-white shadow-lg"
             />
