@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimelineItem } from './TimelineItem';
+import { ExperienceItem } from './ExperienceItem';
 import type { Experience } from '../../types/experience';
 
 interface ExperienceListProps {
@@ -10,8 +10,8 @@ export function ExperienceList({ experiences }: ExperienceListProps) {
   return (
     <div className="relative">
       {experiences.map((experience, index) => (
-        <TimelineItem
-          key={`${experience.company}-${experience.period}`}
+        <ExperienceItem
+          key={`${experience.name}-${experience.period}`}
           experience={experience}
           isLast={index === experiences.length - 1}
         />
