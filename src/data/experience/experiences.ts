@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     ...companies.xiatech,
     position: "Data Engineer",
     period: "February 2022 - September 2024",
-    description: "Led the design and implementation of cloud-native data solutions, ensuring efficient, scalable, and secure data pipelines.",
+    description: "Led the design and implementation of cloud-native data solutions, ensuring efficient, scalable, and secure data pipelines. Mentored junior engineers and drove best practices for data engineering.",
     technologies: ["Python", "Google Cloud", "Terraform", "Apache Airflow", "PySpark", "BigQuery", "Dataform", "Docker"],
     detailedDescription: "Designed and maintained datasets in Google Cloud BigQuery while leveraging Terraform for infrastructure as code. Developed robust ETL pipelines, real-time streaming solutions using Google Pub/Sub, and data orchestration frameworks with Apache Airflow. Delivered optimized large-scale data processing systems utilizing PySpark and advanced Python scripting.",
     achievements: [
