@@ -1,8 +1,9 @@
 interface Window {
   gtag: (
-    type: string,
-    value: string,
-    options?: { [key: string]: any }
+    command: string,
+    ...args: any[]
   ) => void;
   dataLayer: any[];
 }
+
+export {};
