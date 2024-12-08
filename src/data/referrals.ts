@@ -16,5 +16,13 @@ export const referrals: Referral[] = [
     image: "/images/gisele.jpeg",
     testimonial: "Marcelo is a creative professional who brings innovation to the workplace. His work is consistent and collaborative, based on technical knowledge and thorough research.",
     linkedin: "https://www.linkedin.com/in/gisele-corraleiro-465bb426/"
-  }
+  },
+	{
+		name: "James Picckering",
+		position: "Data Engineer",
+		company: "Xiatch Consulting Ltd",
+		image: "/images/james.jpeg",
+		testimonial: "Marcelo is a highly skilled Data Engineer with deep expertise in Python and cloud-native solutions. He combines technical excellence with innovation to create impactful data architectures.",
+		linkedin: "https://www.linkedin.com/in/jamespickeringdata/overlay/"
+	}
 ];
