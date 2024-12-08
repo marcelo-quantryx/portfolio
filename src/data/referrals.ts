@@ -18,7 +18,7 @@ export const referrals: Referral[] = [
     linkedin: "https://www.linkedin.com/in/gisele-corraleiro-465bb426/"
   },
 	{
-		name: "James Picckering",
+		name: "James Pickering",
 		position: "Data Engineer",
 		company: "Xiatech Consulting Ltd",
 		image: "/images/james.jpeg",
