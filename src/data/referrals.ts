@@ -20,7 +20,7 @@ export const referrals: Referral[] = [
 	{
 		name: "James Picckering",
 		position: "Data Engineer",
-		company: "Xiatch Consulting Ltd",
+		company: "Xiatech Consulting Ltd",
 		image: "/images/james.jpeg",
 		testimonial: "Marcelo is a highly skilled Data Engineer with deep expertise in Python and cloud-native solutions. He combines technical excellence with innovation to create impactful data architectures.",
 		linkedin: "https://www.linkedin.com/in/jamespickeringdata/overlay/"
