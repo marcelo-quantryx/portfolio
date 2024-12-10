@@ -23,6 +23,14 @@ export const referrals: Referral[] = [
 		company: "Xiatech Consulting Ltd",
 		image: "/images/james.jpeg",
 		testimonial: "Marcelo is a highly skilled Data Engineer with deep expertise in Python and cloud-native solutions. He combines technical excellence with innovation to create impactful data architectures.",
-		linkedin: "https://www.linkedin.com/in/jamespickeringdata/overlay/"
+		linkedin: "https://www.linkedin.com/in/jamespickeringdata/"
+	},
+	{
+		name: "Adam Al-Hilali",
+		position: "Founder",
+		company: "Liberty Music PR",
+		image: "/images/adam.jpeg",
+		testimonial: "I have collaborated with Marcelo on several projects over last few years, he has always found very creative and innovative solutions throughout each project, nothing has ever been out of reach of possibility when working with Marcelo. Highly recommend!",
+		linkedin: "https://www.linkedin.com/in/adam-al-hilali-3070a241/"
 	}
 ];
